@@ -1,12 +1,12 @@
 {
   "name": "bunyaitter",
   "module": "src/index.ts",
-  "type": "module",
-  "private": true,
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^7"
-  }
+  },
+  "private": true,
+  "type": "module"
 }
