@@ -1,1 +1,3 @@
-import "./dev_bypass_auth";
+import { server } from "./server";
+
+console.log(`bunyaitter server started at ${server.url}`);
