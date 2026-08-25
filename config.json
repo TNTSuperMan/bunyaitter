@@ -1,0 +1,40 @@
+{
+  "server": {
+    "port": 3000,
+    "postSharePort": 3000,
+    "jsonBodyLimitMb": 7,
+    "apiEndpoint": "/server",
+    "cors": {
+      "allowedOrigins": ["http://localhost:3000", "http://127.0.0.1:3000"],
+      "credentials": false,
+      "preflightMaxAge": 600
+    }
+  },
+  "limits": {
+    "postContentLen": [0, 1000],
+    "dm": {
+      "contentLen": [0, 2000],
+      "e2e": {
+        "ephemeralKeyLen": [1, 1024],
+        "cipherTextLen": [1, 16384],
+        "payloadLen": [0, 65536]
+      }
+    },
+    "userNameLen": [1, 50],
+    "profileBioLen": [0, 500],
+    "scratchUsernameLen": [3, 20],
+    "files": {
+      "fileUploadSizeMB": [0, 5],
+      "storageUserQuotaMB": [0, 512],
+      "image": {
+        "width": [0, 2560],
+        "height": [0, 2560],
+        "pixels": [0, 40000000],
+        "outputSizeMB": [0, 5]
+      }
+    }
+  },
+  "dm": {
+    "e2eEnabled": false
+  }
+}
